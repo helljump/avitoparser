@@ -1,0 +1,17 @@
+{% for item in items %}
+Объявление: {{ item.item_id }}
+Заголовок: {{ item.title }}
+Цена: {{ item.price }}
+Имя: {{ item.name }}
+Телефон: {{ item.phone }}
+Город: {{ item.town }}
+Описание:
+{{ item.desc }}
+Изображения:
+{% for photo in item.files %}
+{{ photo }}
+{% else %}
+Нет изображений
+{% endfor %}
+-----------------
+{% endfor %}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrefsDialog</class>
+ <widget class="QDialog" name="PrefsDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>549</width>
+    <height>203</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Настройки</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="try_sb">
+     <property name="maximumSize">
+      <size>
+       <width>102</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Потоков</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="threads_sb">
+     <property name="maximumSize">
+      <size>
+       <width>102</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QSpinBox" name="pause_sb">
+     <property name="maximumSize">
+      <size>
+       <width>102</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="suffix">
+      <string> сек.</string>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Количество попыток</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QCheckBox" name="proxy_cb">
+     <property name="text">
+      <string>Использовать прокси</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Паузы между запросами</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="LineEditButton" name="proxy_le">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>файл прокси</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../res/icons.qrc">
+       <normaloff>:/page.png</normaloff>:/page.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Путь экспорта изображений</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="imgpath_le">
+     <property name="text">
+      <string>images/</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LineEditButton</class>
+   <extends>QWidget</extends>
+   <header>lineeditbutton</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>pause_sb</tabstop>
+  <tabstop>try_sb</tabstop>
+  <tabstop>threads_sb</tabstop>
+  <tabstop>imgpath_le</tabstop>
+  <tabstop>proxy_cb</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../res/icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>proxy_cb</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>proxy_le</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>365</x>
+     <y>110</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

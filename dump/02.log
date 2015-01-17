@@ -1,0 +1,25 @@
+Request:
+
+Response:
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Thu, 18 Dec 2014 13:00:56 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Keep-Alive: timeout=75
+Location: https://www.avito.ru/items/phone/347169163?pkey=64942607134a42b62d9acd222af41060
+X-Frame-Options: SAMEORIGIN
+
+HTTP/1.1 200 OK
+Server: nginx
+Date: Thu, 18 Dec 2014 13:00:56 GMT
+Content-Type: image/png
+Transfer-Encoding: chunked
+Connection: keep-alive
+Keep-Alive: timeout=75
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Set-Cookie: v=1418907655; expires=Thu, 18-Dec-2014 13:30:56 GMT; Max-Age=1800; path=/; domain=.avito.ru; httponly
+Content-Disposition: filename=8e3b54ee9b11f118caf67372abc0e50c.png
+X-Frame-Options: SAMEORIGIN
+

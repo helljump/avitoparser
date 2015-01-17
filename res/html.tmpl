@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="generator" content="avito parser by helljump" />
+    </head>
+<body>
+<h1>Объявления</h1>
+{% for item in items %}
+<h2>{{ item.title }} <span>{{ item.item_id }}</span></h2>
+<dl>
+<dt>Цена:</dt><dd>{{ item.price }}</dd>
+<dt>Имя:</dt> <dd>{{ item.name }}</dd>
+<dt>Телефон:</dt> <dd>{{ item.phone }}</dd>
+<dt>Город:</dt> <dd>{{ item.town }}</dd>
+</dl>
+<p>{{ item.desc }}</p>
+{% for photo in item.files %}
+<img src='{{ photo }}' style='height: 200px;'>
+{% endfor %}
+<hr>
+{% endfor %}
+</body>
+</html>
