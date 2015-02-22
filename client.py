@@ -101,7 +101,7 @@ class Avito():
             try:
                 g.change_proxy()
                 g.go(url)
-                g.assert_substring(u'content="51a6d66a02fb23c7"') # avitos ya id
+                g.assert_substring(u'content="499bdc75d3636c55"') # avitos ya id
                 break
             except:
                 log.exception('get_item left %i', c)
@@ -175,7 +175,7 @@ class Avito():
 def main():
     p = Avito()  # r"d:\work\proxycheck2\rusarticles.txt")
 
-    item = p.get_item('http://www.avito.ru/krasnodar/kvartiry/3-k_kvartira_121_m_322_et._347169163')
+    item = p.get_item('http://www.avito.ru/krasnodar/kvartiry/3-k_kvartira_103_m_1718_et._457340825')
     print item['town']
     print item['phone']
     print len(p.get_photos(item['photos']))
